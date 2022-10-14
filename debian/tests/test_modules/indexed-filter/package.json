@@ -1,0 +1,34 @@
+{
+  "name": "indexed-filter",
+  "version": "1.0.0",
+  "description": "Array#filter with also detecting indexes of filtered values",
+  "scripts": {
+    "pretest": "eslint --config @shinnn browser.js index.js test.js",
+    "test": "node --strong_mode --throw-deprecation --track-heap-objects test.js",
+    "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js"
+  },
+  "author": "Shinnosuke Watanabe <snnskwtnb@gmail.com> (https://github.com/shinnn)",
+  "repository": "shinnn/indexed-filter",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "arr",
+    "array",
+    "filter",
+    "filtering",
+    "index",
+    "indexed",
+    "value",
+    "values",
+    "client-side",
+    "browser"
+  ],
+  "devDependencies": {
+    "@shinnn/eslint-config": "^1.1.0",
+    "eslint": "^1.6.0",
+    "istanbul": "^0.3.22",
+    "tape": "^4.2.1"
+  }
+}

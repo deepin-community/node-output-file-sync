@@ -1,0 +1,33 @@
+node-output-file-sync (2.0.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from deprecated 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+  * Use dh-sequence-nodejs auto install (Closes: #974293)
+  * New upstream version 2.0.1
+  * Embed some little modules for test only
+  * Enable upstream test using tape
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 22 Dec 2020 18:36:27 +0100
+
+node-output-file-sync (1.1.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #849115)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 23 Dec 2016 00:06:36 +0530

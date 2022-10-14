@@ -1,0 +1,38 @@
+Description: fix test for mkdirp ≥ 1
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: no
+Last-Update: 2020-12-22
+
+--- a/test.js
++++ b/test.js
+@@ -14,7 +14,7 @@
+ 	(async () => {
+ 		t.equal(
+ 			outputFileSync('tmp_file', 'foo', 'utf8'),
+-			null,
++			undefined,
+ 			'should return null when it doesn\'t create any directories.'
+ 		);
+ 
+@@ -154,12 +154,6 @@
+ 	);
+ 
+ 	t.throws(
+-		() => outputFileSync('_', '', {fs: []}),
+-		/^TypeError/,
+-		'should throw an error when the option is not valid for mkdirp.'
+-	);
+-
+-	t.throws(
+ 		() => outputFileSync('_', '', {mode: Infinity}),
+ 		/^RangeError.*`mode` option to be a positive integer or a string of octal code.*but got Infinity\./,
+ 		'should throw an error when mode option is infinite.'
+@@ -203,7 +197,7 @@
+ 
+ 	t.throws(
+ 		() => outputFileSync('_', '', {mode: new WeakMap()}),
+-		/^TypeError.*Expected `mode` option to be.* but got WeakMap \{\} instead\./,
++		/^TypeError.*Expected `mode` option to be.* but got WeakMap .* instead\./,
+ 		'should throw an error when mode option is neither string nor number.'
+ 	);
+ 

@@ -1,0 +1,40 @@
+{
+	"name": "get-mode",
+	"version": "1.0.1",
+	"description": "Get a file mode",
+	"repository": "shinnn/get-mode",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"scripts": {
+		"pretest": "eslint --fix --format=codeframe index.js test.js",
+		"test": "tap --coverage --jobs-auto test.js"
+	},
+	"license": "ISC",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"mode",
+		"file",
+		"stat",
+		"lstat",
+		"int",
+		"integer",
+		"number",
+		"promise",
+		"async",
+		"asynchronous"
+	],
+	"dependencies": {
+		"inspect-with-kind": "^1.0.0",
+		"is-plain-obj": "^1.1.0"
+	},
+	"devDependencies": {
+		"@shinnn/eslint-config-node": "^5.0.0",
+		"eslint": "^4.13.0",
+		"run-parallel": "^1.1.6",
+		"tap": "^11.0.0"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn/node"
+	}
+}
