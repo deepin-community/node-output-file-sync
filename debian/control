@@ -5,14 +5,14 @@ Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.deb
 Uploaders: Pirate Praveen <praveen@debian.org>
 Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
- , node-graceful-fs (>= 4.1.4) <!nocheck>
+ , node-graceful-fs <!nocheck>
  , node-is-plain-obj <!nocheck>
  , node-kind-of <!nocheck>
- , node-mkdirp (>= 0.5) <!nocheck>
+ , node-mkdirp <!nocheck>
  , node-rimraf <!nocheck>
  , node-strip-bom <!nocheck>
  , node-tape <!nocheck>
-Standards-Version: 4.5.1
+Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/js-team/node-output-file-sync
 Vcs-Git: https://salsa.debian.org/js-team/node-output-file-sync.git
 Homepage: https://github.com/shinnn/output-file-sync
@@ -22,9 +22,8 @@ Rules-Requires-Root: no
 Package: node-output-file-sync
 Architecture: all
 Depends: ${misc:Depends}
- , node-graceful-fs (>= 4.1.4)
+ , node-graceful-fs
  , node-is-plain-obj
- , node-mkdirp (>= 0.5)
+ , node-mkdirp
 Description: Synchronously write a file and create its ancestor directories if needed
- .
  Node.js is an event-based server-side JavaScript engine.
