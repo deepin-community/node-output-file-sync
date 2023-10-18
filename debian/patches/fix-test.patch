@@ -1,7 +1,7 @@
 Description: fix test for mkdirp ≥ 1
 Author: Xavier Guimard <yadd@debian.org>
 Forwarded: no
-Last-Update: 2020-12-22
+Last-Update: 2022-04-13
 
 --- a/test.js
 +++ b/test.js
@@ -13,6 +13,24 @@ Last-Update: 2020-12-22
 +			undefined,
  			'should return null when it doesn\'t create any directories.'
  		);
+ 
+@@ -113,7 +113,7 @@
+ 
+ 	t.throws(
+ 		() => outputFileSync('_', new Set()),
+-		/^TypeError.*Expected file content to be a string, Buffer or Uint8Array, but got Set {} instead\./,
++		/^TypeError.*Expected file content to be a string, Buffer or Uint8Array, but got Set.* {} instead\./,
+ 		'should throw an error when the second argument is not a valid file content.'
+ 	);
+ 
+@@ -125,7 +125,7 @@
+ 
+ 	t.throws(
+ 		() => outputFileSync('_', '', 'utf\0'),
+-		/^Error.*for exmaple 'utf8' and 'ascii', but got 'utf\\u0000' instead\./,
++		/^Error.*for exmaple .*utf8.* and .*ascii.*, but got .* instead\./,
+ 		'should throw an error when the third argument is an invalid encoding.'
+ 	);
  
 @@ -154,12 +154,6 @@
  	);

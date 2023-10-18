@@ -1,3 +1,28 @@
+node-output-file-sync (2.0.1-3) unstable; urgency=medium
+
+  * Team upload
+  * Fix test for nodejs >= 14 (Closes: #1009591)
+
+ -- Yadd <yadd@debian.org>  Wed, 13 Apr 2022 12:56:57 +0200
+
+node-output-file-sync (2.0.1-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends: Drop versioned constraint on node-graceful-fs, node-mkdirp.
+    + node-output-file-sync: Drop versioned constraint on node-graceful-fs,
+      node-mkdirp in Depends.
+  * Remove empty leading paragraph in Description.
+
+  [ Yadd ]
+  * Fix GitHub tags regex
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+
+ -- Yadd <yadd@debian.org>  Mon, 22 Nov 2021 14:48:08 +0100
+
 node-output-file-sync (2.0.1-1) unstable; urgency=medium
 
   * Team upload
